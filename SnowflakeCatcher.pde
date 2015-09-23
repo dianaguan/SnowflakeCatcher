@@ -4,7 +4,7 @@ void setup()
   //your code here
   background(0);
   size(800,500);
-  snow  = new Snowflake[20];
+  snow  = new Snowflake[80];
   for (int i=0; i<snow.length; i++)
   {
     snow[i] = new Snowflake();
@@ -13,6 +13,7 @@ void setup()
 void draw()
 {
     //your code here
+
     for (int i = 0; i<snow.length; i++)
     {
       snow[i].erase();
@@ -25,6 +26,9 @@ void draw()
 void mouseDragged()
 {
   //your code here
+  noStroke();
+  fill(250,46,120);
+  ellipse(mouseX, mouseY, 5,5);
 }
 
 class Snowflake
@@ -42,6 +46,7 @@ class Snowflake
   void show()
   {
     //your code here
+    noStroke();
     fill(255);
     ellipse(x,y,5,5);
     
@@ -49,13 +54,13 @@ class Snowflake
   void lookDown()
   {
     //your code here
-    // if(y>0 && y<500 && (get(y+1) != Color(0)))
-    // {
-    //   isMoving = true;
-    // }
-    // else {
-    //  isMoving = false;   
-    // }  
+    if(/*y>0 && y<500 &&*/ (get(x,y+1) != color(0)))
+    {
+      isMoving = true;
+    }
+    else {
+     isMoving = false;   
+    }  
   }
   void erase()
   {
