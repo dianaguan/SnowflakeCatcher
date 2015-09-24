@@ -54,13 +54,17 @@ class Snowflake
   void lookDown()
   {
     //your code here
-    if(/*y>0 && y<500 &&*/ (get(x,y+1) != color(0)))
+    if(y>0 && y<500)
     {
-      isMoving = true;
-    }
-    else {
-     isMoving = false;   
-    }  
+      if (get(x,y+1) != color(0))
+        {
+          isMoving = false;
+        }
+        else 
+        {
+         isMoving = true;   
+        }  
+      }
   }
   void erase()
   {
@@ -79,7 +83,7 @@ class Snowflake
   void wrap()
   {
     //your code here
-    if(y>500)
+    if(y>498)
     {
       y = 0;
       x = (int)(Math.random()*801);
