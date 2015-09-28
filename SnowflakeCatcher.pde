@@ -54,9 +54,9 @@ class Snowflake
   void lookDown()
   {
     //your code here
-    if(y>0 && y<500)
+    if(y>0 && y<504)
     {
-      if (get(x,y+1) != color(0))
+      if (get(x,y+3) != color(0))
         {
           isMoving = false;
         }
@@ -83,7 +83,7 @@ class Snowflake
   void wrap()
   {
     //your code here
-    if(y>498)
+    if(y>495)
     {
       y = 0;
       x = (int)(Math.random()*801);
