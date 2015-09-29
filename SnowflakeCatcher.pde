@@ -4,7 +4,7 @@ void setup()
   //your code here
   background(0);
   size(800,500);
-  snow  = new Snowflake[80];
+  snow  = new Snowflake[800];
   for (int i=0; i<snow.length; i++)
   {
     snow[i] = new Snowflake();
@@ -54,9 +54,9 @@ class Snowflake
   void lookDown()
   {
     //your code here
-    if(y>0 && y<504)
+    if(y>0 && y<503)
     {
-      if (get(x,y+3) != color(0))
+      if (get(x,y+4) != color(0))
         {
           isMoving = false;
         }
@@ -70,7 +70,7 @@ class Snowflake
   {
     //your code here
     fill(0);
-    ellipse(x,y,7,7);
+    ellipse(x,y,8,8);
   }
   void move()
   {
