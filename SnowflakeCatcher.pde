@@ -2,9 +2,9 @@ Snowflake [] snow;
 void setup()
 {
   //your code here
-  background(0);
+  background(0, 51, 103);
   size(800,500);
-  snow  = new Snowflake[800];
+  snow  = new Snowflake[100];
   for (int i=0; i<snow.length; i++)
   {
     snow[i] = new Snowflake();
@@ -56,7 +56,7 @@ class Snowflake
     //your code here
     if(y>0 && y<503)
     {
-      if (get(x,y+4) != color(0))
+      if (get(x,y+4) != color(0, 51, 103))
         {
           isMoving = false;
         }
@@ -69,8 +69,8 @@ class Snowflake
   void erase()
   {
     //your code here
-    fill(0);
-    ellipse(x,y,8,8);
+    fill(0, 51, 103);
+    ellipse(x,y,9,9);
   }
   void move()
   {
