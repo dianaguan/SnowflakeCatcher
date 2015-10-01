@@ -1,3 +1,4 @@
+PImage img;
 Snowflake [] snow;
 void setup()
 {
@@ -9,6 +10,9 @@ void setup()
   {
     snow[i] = new Snowflake();
   }
+  img = loadImage("images.jpg");
+//   image(img,300,300);
+ img.resize(100,100);
 }
 void draw()
 {
@@ -22,12 +26,15 @@ void draw()
       snow[i].wrap();
       snow[i].show();
     }
+
+  image(img,450,300);
+
 }
 void mouseDragged()
 {
   //your code here
   noStroke();
-  fill(250,46,120);
+  fill(0);
   ellipse(mouseX, mouseY, 5,5);
 }
 
@@ -70,14 +77,14 @@ class Snowflake
   {
     //your code here
     fill(0, 51, 103);
-    ellipse(x,y,9,9);
+    ellipse(x,y,8,8);
   }
   void move()
   {
     //your code here
     if(isMoving == true)
     {
-      y++;
+      y+=5;
     }
   }
   void wrap()
