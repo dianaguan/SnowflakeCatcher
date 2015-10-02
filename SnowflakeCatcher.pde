@@ -12,7 +12,7 @@ void setup()
   }
   img = loadImage("images.jpg");
 //   image(img,300,300);
- img.resize(100,100);
+ img.resize(50,50);
 }
 void draw()
 {
@@ -35,7 +35,7 @@ void mouseDragged()
   //your code here
   noStroke();
   fill(0);
-  ellipse(mouseX, mouseY, 5,5);
+  ellipse(mouseX, mouseY, 10,10);
 }
 
 class Snowflake
