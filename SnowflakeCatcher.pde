@@ -35,7 +35,7 @@ void mouseDragged()
   //your code here
   noStroke();
   fill(0);
-  ellipse(mouseX, mouseY, 10,10);
+  rect(mouseX, mouseY, 10,10);
 }
 
 class Snowflake
